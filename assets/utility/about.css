@@ -1,0 +1,219 @@
+/*Titile About Section*/
+
+.title-about{
+    width: 100%;
+    height: 57vh;
+    background: var(--color-bg2);
+}
+
+.title-about__container{
+    position: relative;
+    top: 50%;
+    text-align: center;
+}
+
+.title-about__container h1{
+    font-weight: 400;
+}
+
+
+.title-about__container .flex{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.title-about__container .flex a:hover{
+    text-decoration: underline;
+}
+
+/*Tentang Section*/
+.tentang{
+    margin-top: 1rem;
+}
+
+.tentang__container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 5rem;
+}
+
+.tentang__right > p{
+    margin: 1.6rem 0 2.5rem;
+}
+
+.tentang__left-img{
+    margin: 15% auto;
+}
+
+.tentang__left-img img{
+    max-width: 90%;
+    display: block;
+    margin: 0 auto;
+}
+
+.tentang__cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.tentang__card{
+    background: var(--color-bg1);
+    padding: 1.6rem 0.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition: var(--trainsition);
+}
+
+.tentang__card:hover{
+    background: var(--color-bg2);
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+}
+
+.tentang__icon{
+    background: var(--color-danger);
+    padding: 0.8rem 1.6rem;
+    border-radius: 1rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.tentang__card:nth-child(2) .tentang__icon{
+    background: var(--color-success);
+}
+.tentang__card:nth-child(3) .tentang__icon{
+    background: var(--color-primary);
+}
+
+.tentang__card p{
+    margin-top: 0.5rem;
+}
+
+/* Team Section**/
+.team{
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+    margin-bottom: 3rem;
+}
+
+.team__container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.team__member{
+    background: var(--color-bg2);
+    padding: 2rem;
+    border: 1px solid transparent;
+    transition: var(--trainsition);
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.team__member:hover{
+    background: transparent;
+    border-color: var(--color-primary);
+}
+
+.team__member-image{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.team__member-image img{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    filter: saturate(0);
+    transition: var(--trainsition);
+}
+
+.team__member-image img:hover{
+    filter: saturate(1);
+}
+
+.team__member-info *{
+    text-align: center;
+    margin-top: 1.4rem;
+}
+
+.team__member-info p{
+    color: var(--color-light);
+}
+
+.team__member-socials{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-primary);
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: -2rem 0 2rem rgba(0, 0, 0, 0.3);
+    transition: var(--trainsition);
+}
+
+.team__member:hover .team__member-socials{
+    right: 0;
+}
+
+.team__member-socials a{
+    padding: 1rem;
+}
+
+/* Responsive Tablets*/
+@media screen and (max-width: 1024px){
+    .tentang{
+        margin-top: 2rem;
+    } 
+
+    .tentang__container{
+        grid-template-columns: 1fr;
+    }
+
+    .tentang__left{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .team__container{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .team__member{
+        padding: 2rem 1rem;
+    }
+}
+
+/* Responsive Phones*/
+@media screen and (max-width: 600px) {
+    .tentang__cards{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+
+    .team__container{
+        gap: 0.7rem;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .team__member{
+        padding: 0;
+    }
+
+    .team__member p{
+        margin-bottom: 1.9rem;
+    }
+}
+

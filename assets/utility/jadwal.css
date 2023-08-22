@@ -1,0 +1,259 @@
+/*Titile About Section*/
+
+.title-about{
+    width: 100%;
+    height: 57vh;
+    background: var(--color-bg2);
+}
+
+.title-about__container{
+    position: relative;
+    top: 50%;
+    text-align: center;
+}
+
+.title-about__container h1{
+    font-weight: 400;
+}
+
+
+.title-about__container .flex{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.title-about__container .flex a:hover{
+    text-decoration: underline;
+}
+
+/* Pengajar Section */
+.pengajar{
+    margin-bottom: 3rem;
+}
+
+.pengajar__container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.pengajar__member{
+    background: var(--color-bg2);
+    padding: 2rem;
+    border: 1px solid transparent;
+    transition: var(--trainsition);
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.pengajar__member:hover{
+    background: transparent;
+    border-color: var(--color-primary);
+}
+
+.pengajar__member-image{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.pengajar__member-image img{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    filter: saturate(0);
+    transition: var(--trainsition);
+}
+
+.pengajar__member-image img:hover{
+    filter: saturate(1);
+}
+
+.pengajar__member-info *{
+    text-align: center;
+    margin-top: 1.4rem;
+}
+
+.pengajar__member-info p{
+    color: var(--color-light);
+}
+
+/* Siswa Section*/
+.siswa{
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+    margin-bottom: 3rem;
+}
+
+.table-box{
+    width: 90%;
+    height: 600px;
+    border-radius: 10px;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    box-shadow: 0 10px 100px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+}
+
+.table-box table{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.table-box::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+
+.table-box::-webkit-scrollbar-track{
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+}
+
+.table-box::-webkit-scrollbar-thumb{
+    background: var(--color-primary);
+    border-radius: 50px;
+}
+
+.table-box th, .table-box td{
+    padding: 10px;
+}
+
+.table-box table, .table-box th, .table-box td{
+    border: 1px solid var(--color-primary);
+    color: #fff;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.table-box th{
+    background: var(--color-bg2);
+    color: #fff;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+}
+
+.table-box tr th:nth-child(1){
+    width: 60px;
+    text-align: center;
+    background: var(--color-bg1);
+}
+
+.table-box tr td:nth-child(1){
+    background: var(--color-bg2);
+    color: #fff;
+    text-align: center;
+}
+
+/*Pelajaran Section*/
+.table-pelajaran{
+    width: 90%;
+    border-radius: 10px;
+    background: var(--color-bg1);
+    margin: 0 auto;
+    overflow-x: scroll;
+}
+
+.table-pelajaran::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+
+.table-pelajaran::-webkit-scrollbar-track{
+    width: 10px;
+    height: 10px;
+}
+
+.table-pelajaran::-webkit-scrollbar-thumb{
+    background: var(--color-primary);
+    border-radius: 50px;
+}
+
+.table-pelajaran table{
+    width: 100%;
+    color: var(--color-black);
+}
+
+.table-pelajaran th, .table-pelajaran td{
+    padding: 10px;
+}
+
+.table-pelajaran table, .table-pelajaran th, .table-pelajaran td{
+    border: 1px solid var(--color-primary);
+    border-collapse: collapse;
+    color: #fff;
+    text-align: left;
+}
+
+.table-pelajaran th{
+    background: var(--color-bg2);
+    color: #fff;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+}
+
+.table-pelajaran tr th:nth-child(1){
+    width: 60px;
+    text-align: center;
+    background: var(--color-bg1);
+}
+
+.table-pelajaran tr td:nth-child(1){
+    background: var(--color-bg2);
+    color: #fff;
+    text-align: center;
+}
+
+/*Responsive Tablet*/
+@media screen and (max-width: 1024px) {
+    .pengajar__container{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .pengajar__member{
+        padding: 2rem 1rem;
+    }
+
+    .pelajaran{
+        padding-top: 2rem;
+    }
+}
+
+/*Responsive Phones*/
+@media screen and (max-width: 600px){
+    .pengajar__container{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+
+    .pengajar__member{
+        padding: 0;
+    }
+
+    .pengajar__member p{
+        margin-bottom: 1.9rem;
+    }
+
+    /* Table Phones */
+    .table-box, .table-pelajaran{
+        width: 100%;
+    }
+
+    /* Pelajaran Phones */
+    .pelajaran{
+        padding-top: 2rem;
+    }
+}
+
+
+
