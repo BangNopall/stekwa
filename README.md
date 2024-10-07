@@ -59,7 +59,7 @@ Distributed under the MIT License. See [`LICENSE`](https://github.com/BangNopall
 
 Naufal - [LinkedIn](https://www.linkedin.com/in/muhammad-naufal-mathara-rahman/) - noxvalproject@gmail.com
 
-Project Link: [https://github.com/BangNopall/coba-laravel/](https://github.com/BangNopall/stekwa/)
+Project Link: [https://github.com/BangNopall/stekwa/](https://github.com/BangNopall/stekwa/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
